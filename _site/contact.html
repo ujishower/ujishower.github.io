@@ -85,6 +85,17 @@ Coffee
 
 
       <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<script>
+function validateForm() {
+    var x = document.forms["form1"]["Email"].value;
+    if (x == null || x == "") {
+        alert("Please, add an email");
+        return false;
+    alert("Please, add an email");
+    }
+}
+</script>
 
 <head>
 	<title>Uji Shower Contact Form</title>
@@ -105,12 +116,9 @@ Coffee
 				
 		<div id="contact-area">
 			
-			<form method="post" action="https://formspree.io/team@ujishower.com">
+			<form method="post" name="form1" action="https://formspree.io/showeruji@gmail.com" onsubmit="return validateForm()">
 				<label for="Name" style="color:grey">Name:</label>
 				<input type="text" name="Name" id="Name" />
-				
-				<label for="City" style="color:grey">City:</label>
-				<input type="text" name="City" id="City" />
 	
 				<label for="Email" style="color:grey">Email:</label>
 				<input type="text" name="Email" id="Email" />
@@ -119,7 +127,7 @@ Coffee
 				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
 
 				<input style="color:black" type="submit" name="submit" value="Submit" class="submit-button"/>
-                <input type="hidden" name="_next" value="http://ujishower.github.io/" />
+                <input type="hidden" name="_next" value="http://ujishower.com" />
                 
 			</form>
 			
