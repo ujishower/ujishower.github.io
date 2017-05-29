@@ -137,6 +137,8 @@ $baseurl: '{{ site.baseurl }}/images';
 	h5 {
 		font-size: 0.8em;
 		line-height: 1.5em;
+        text-transform: none !important;
+        
 	}
 
 	h6 {
